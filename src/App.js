@@ -40,15 +40,17 @@ function UserManage() {
   return (
     <div>
       <h2>Users: {users.length}</h2>
-      {users.map((user) => (
-        <User
-          name={user.name}
-          email={user.email}
-          phone={user.phone}
-          website={user.website}
-          companyName={user.company.name}
-        ></User>
-      ))}
+      <div className="user-container">
+        {users.map((user) => (
+          <User
+            name={user.name}
+            email={user.email}
+            phone={user.phone}
+            website={user.website}
+            companyName={user.company.name}
+          ></User>
+        ))}
+      </div>
     </div>
   );
 }
